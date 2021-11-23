@@ -28,7 +28,7 @@ const routes: Routes = [
   {path: 'create-oferta', component: CrearModificarOfertaComponent},
   {path: 'edit-oferta/:id', component: CrearModificarOfertaComponent},
   {path: 'dashboard',component:DashboardComponent},
-  {path: '**', redirectTo: 'create-order'},
+  {path: '**', redirectTo: 'home'},
   
 ];
 

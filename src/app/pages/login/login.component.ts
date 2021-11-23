@@ -44,10 +44,14 @@ export class LoginComponent implements OnInit {
         console.log(resp);
         Swal.close();
 
-        if(this.recuerdame){
+
           localStorage.setItem('email',this.usuario.email);
-        }
+
         this.router.navigateByUrl('/home');
+        (document.querySelector("#petro2") as HTMLDivElement).style.display="flex";
+        (document.querySelector("#petro1") as HTMLDivElement).style.display="none";
+        (document.querySelector(".micorreo") as HTMLParagraphElement).innerText=localStorage.getItem("email");
+
       }, (err) => {
         console.log(err.error.error.message);
         if(err.error.error.message=="EMAIL_NOT_FOUND"){

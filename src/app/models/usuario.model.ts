@@ -4,8 +4,6 @@ export class UsuarioModel {
   pais:string;
   usuario:string;
   ciudad:string;
-
-  
   email: string;
   password: string;
 }

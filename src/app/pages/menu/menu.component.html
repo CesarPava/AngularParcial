@@ -3,23 +3,56 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="['/home']">Inicio</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/estacionamiento']">Ordenes</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/temperatura']">Tiendas</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/temperatura']">Usuarios</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/temperatura']">Domiciliarios</a>
-      </li>
+ 
+    <ul class="navbar-nav w-100">
+      <div  class ="w-100" style="display: flex; justify-content: space-between">
+
+        <div style="display: flex;">
+
+          <li class="nav-item active">
+            <a class="nav-link" [routerLink]="['/home']">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/estacionamiento']">Ordenes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/temperatura']">Tiendas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/temperatura']">Usuarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/temperatura']">Domiciliarios</a>
+          </li>
+        </div>
+        <div id="petro1" style="display: flex">
+          
+          <li class="nav-item">            
+            <li class="nav-item">              
+              <button   (click)="iniciarSesion()"type="submit" style="margin-left: 20px;" class="btn btn-primary">Iniciar Sesión</button>
+              
+            </li>
+        </div>
+        <div id="petro2" style="display: flex">
+          
+          <li class="nav-item">
+            <p class="form-label mt-2 micorreo"   name="email"> {{correo}} </p></li>
+            
+            <li class="nav-item">
+              <button  (click)="cerrarSesion()" type="submit" style="margin-left: 20px;" class="btn btn-primary">Cerrar Sesión</button>
+              
+            </li>
+
+        </div>
+
+      </div>
+
+      
+
+      
+        
+     
+      
     </ul>
-  </div>
+ 
 </nav>

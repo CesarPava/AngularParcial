@@ -19,31 +19,13 @@ const routes: Routes = [
   { path: 'order-info', component:OrdenInfoComponent},
   { path: 'create-order', component: CreateOrderComponent},
   {path:'table-list',component:TableListComponent},
+  {path: 'create-producto', component: CrearModificarProductoComponent},
+  {path: 'edit-producto/:id', component: CrearModificarProductoComponent},
+  {path: 'create-metodo', component: CrearModificarMetodoPagoComponent},
+  {path: 'edit-metodo/:id', component: CrearModificarMetodoPagoComponent},
+  {path: 'create-oferta', component: CrearModificarOfertaComponent},
+  {path: 'edit-oferta/:id', component: CrearModificarOfertaComponent},
   {path: '**', redirectTo: 'create-order'},
-  {
-    path: 'createProducto',
-    component: CrearModificarProductoComponent
-  },
-  {
-    path: 'editProducto/:id',
-    component: CrearModificarProductoComponent
-  },
-  {
-    path: 'createMetodo',
-    component: CrearModificarMetodoPagoComponent
-  },
-  {
-    path: 'editMetodo/:id',
-    component: CrearModificarMetodoPagoComponent
-  },
-  {
-    path: 'createOferta',
-    component: CrearModificarOfertaComponent
-  },
-  {
-    path: 'editOferta/:id',
-    component: CrearModificarOfertaComponent
-  },
   {
     path: 'panelAmin',
     redirectTo: 'dashboard',

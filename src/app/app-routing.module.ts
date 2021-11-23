@@ -11,8 +11,10 @@ import { TableListComponent } from './pages/table-list/table-list.component';
 import { CrearModificarProductoComponent } from './pages/crear-modificar-producto/crear-modificar-producto.component';
 import { CrearModificarMetodoPagoComponent } from './pages/crear-modificar-metodo-pago/crear-modificar-metodo-pago.component';
 import { CrearModificarOfertaComponent } from './pages/crear-modificar-oferta/crear-modificar-oferta.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 const routes: Routes = [
+  
   {path: 'home', component: HomeComponent,canActivate:[AuthGuard]},
   {path: 'registro', component: RegistroComponent},
   {path: 'login', component: LoginComponent},
@@ -25,12 +27,9 @@ const routes: Routes = [
   {path: 'edit-metodo/:id', component: CrearModificarMetodoPagoComponent},
   {path: 'create-oferta', component: CrearModificarOfertaComponent},
   {path: 'edit-oferta/:id', component: CrearModificarOfertaComponent},
+  {path: 'dashboard',component:DashboardComponent},
   {path: '**', redirectTo: 'create-order'},
-  {
-    path: 'panelAmin',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
-  }
+  
 ];
 
 @NgModule({

@@ -17,6 +17,10 @@ import { TableListComponent } from './pages/table-list/table-list.component';
 import { CreateOrderComponent } from './pages/create-order/create-order.component';
 import { OrdenInfoComponent } from './pages/orden-info/orden-info.component';
 import { AngularFirestore } from 'angularfire2/firestore';
+import { CrearModificarProductoComponent } from './pages/crear-modificar-producto/crear-modificar-producto.component';
+import { CrearModificarMetodoPagoComponent } from './pages/crear-modificar-metodo-pago/crear-modificar-metodo-pago.component';
+import { CrearModificarOfertaComponent } from './pages/crear-modificar-oferta/crear-modificar-oferta.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { AngularFirestore } from 'angularfire2/firestore';
     MenuComponent,
     TableListComponent,
     CreateOrderComponent,
-    OrdenInfoComponent
+    OrdenInfoComponent,
+    CrearModificarProductoComponent,
+    CrearModificarMetodoPagoComponent,
+    CrearModificarOfertaComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

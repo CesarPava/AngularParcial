@@ -1,0 +1,122 @@
+<h2 style="margin-top: 80px; margin-left: 20px">
+  Panel principal de gestiones
+</h2>
+<div class="card">
+  <div class="card-header card-header-warning">
+    <span class="card-title" style="font-size: 30px">Mis productos</span>
+    <button class="btn btn-danger pull-right" routerLink="/createProducto">
+      Agregar
+    </button>
+  </div>
+  <div class="card-body table-responsive">
+    <table class="table table-hover">
+      <thead class="text-warning">
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Unidades disponibles</th>
+        <th></th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let producto of productos">
+          <td>{{ producto.nombre }}</td>
+          <td>{{ producto.descripcion }}</td>
+          <td>{{ producto.precio }}</td>
+          <td>{{ producto.unidades }}</td>
+          <td>
+            <i
+              class="fas fa-edit fa-lg text-info"
+              style="padding-right: 5px; cursor: pointer"
+              [routerLink]="['/editProducto', producto.id]"
+            ></i>
+            <i
+              (click)="eliminarProducto(producto.id)"
+              class="fas fa-trash-alt fa-lg text-danger"
+              style="cursor: pointer"
+            ></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<br />
+<div class="card">
+  <div class="card-header card-header-warning">
+    <span class="card-title" style="font-size: 30px">Mis métodos de pago</span>
+    <button class="btn btn-danger pull-right" routerLink="/createMetodo">
+      Agregar
+    </button>
+  </div>
+  <div class="card-body table-responsive">
+    <table class="table table-hover">
+      <thead class="text-warning">
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Porcentaje</th>
+        <th></th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let metodo of metodos">
+          <td>{{ metodo.nombre }}</td>
+          <td>{{ metodo.descripcion }}</td>
+          <td>{{ metodo.porcentaje }}</td>
+          <td>
+            <i
+              class="fas fa-edit fa-lg text-info"
+              style="padding-right: 5px; cursor: pointer"
+              [routerLink]="['/editMetodo', metodo.id]"
+            ></i>
+            <i
+              (click)="eliminarMetodo(metodo.id)"
+              class="fas fa-trash-alt fa-lg text-danger"
+              style="cursor: pointer"
+            ></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<br>
+<div class="card">
+  <div class="card-header card-header-warning">
+    <span class="card-title" style="font-size: 30px">Mis ofertas</span>
+    <button class="btn btn-danger pull-right" routerLink="/createOferta">
+      Agregar
+    </button>
+  </div>
+  <div class="card-body table-responsive">
+    <table class="table table-hover">
+      <thead class="text-warning">
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Porcentaje</th>
+        <th>Inicio</th>
+        <th>Fin</th>
+        <th></th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let oferta of ofertas">
+          <td>{{ oferta.nombre }}</td>
+          <td>{{ oferta.descripcion }}</td>
+          <td>{{ oferta.porcentaje }}</td>
+          <td>{{ oferta.inicio }}</td>
+          <td>{{ oferta.fin }}</td>
+          <td>
+            <i
+              class="fas fa-edit fa-lg text-info"
+              style="padding-right: 5px; cursor: pointer"
+              [routerLink]="['/editOferta', oferta.id]"
+            ></i>
+            <i
+              (click)="eliminarOferta(oferta.id)"
+              class="fas fa-trash-alt fa-lg text-danger"
+              style="cursor: pointer"
+            ></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

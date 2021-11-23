@@ -8,6 +8,9 @@ import { AuthGuard } from './guards/auth.guard';
 import { CreateOrderComponent } from './pages/create-order/create-order.component';
 import { OrdenInfoComponent } from './pages/orden-info/orden-info.component';
 import { TableListComponent } from './pages/table-list/table-list.component';
+import { CrearModificarProductoComponent } from './pages/crear-modificar-producto/crear-modificar-producto.component';
+import { CrearModificarMetodoPagoComponent } from './pages/crear-modificar-metodo-pago/crear-modificar-metodo-pago.component';
+import { CrearModificarOfertaComponent } from './pages/crear-modificar-oferta/crear-modificar-oferta.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent,canActivate:[AuthGuard]},
@@ -16,7 +19,36 @@ const routes: Routes = [
   { path: 'order-info', component:OrdenInfoComponent},
   { path: 'create-order', component: CreateOrderComponent},
   {path:'table-list',component:TableListComponent},
-  {path: '**', redirectTo: 'create-order'}
+  {path: '**', redirectTo: 'create-order'},
+  {
+    path: 'createProducto',
+    component: CrearModificarProductoComponent
+  },
+  {
+    path: 'editProducto/:id',
+    component: CrearModificarProductoComponent
+  },
+  {
+    path: 'createMetodo',
+    component: CrearModificarMetodoPagoComponent
+  },
+  {
+    path: 'editMetodo/:id',
+    component: CrearModificarMetodoPagoComponent
+  },
+  {
+    path: 'createOferta',
+    component: CrearModificarOfertaComponent
+  },
+  {
+    path: 'editOferta/:id',
+    component: CrearModificarOfertaComponent
+  },
+  {
+    path: 'panelAmin',
+    redirectTo: 'dashboard',
+    pathMatch: 'full',
+  }
 ];
 
 @NgModule({

@@ -1,0 +1,54 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label"  >Email address</label>
+    <input type="email" [(ngModel)]="usuario.email" class="form-control"  name="email" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">Ingrese su correo</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" [(ngModel)]="usuario.password" class="form-control"  name="password">
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Usuario</label>
+    <input type="text" [(ngModel)]="usuario.usuario" class="form-control" id="usuario" name="usuario" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">Ingrese un Usuario</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Apellidos</label>
+    <input type="text" type="text" [(ngModel)]="usuario.apellidos" class="form-control"  name="apellidos" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">Ingrese su apellido</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Pais</label>
+    <input type="text" [(ngModel)]="usuario.pais" class="form-control" name="pais" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">Ingrese su país de origen</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Ciudad</label>
+    <input type="text" [(ngModel)]="usuario.ciudad" class="form-control" name="ciudad" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">Ingrese su ciudad de Origen</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Nombre</label>
+    <input type="text" [(ngModel)]="usuario.nombre" class="form-control" name="nombre" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">Ingrese su nombre</div>
+  </div>
+
+  
+  <div class="mb-3 form-check">
+    <div>
+      <a routerLink="/login" class="txt1">
+        ¿Ya tienes cuenta? / Ingresar
+      </a>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Crear cuenta</button>
+
+  
+</form>

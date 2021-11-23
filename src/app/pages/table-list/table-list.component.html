@@ -1,0 +1,197 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-warning">
+                      <h4 class="card-title ">Ordenes en curso</h4>
+                      <p class="card-category"> Ordenes a realizar</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <button class="btn btn-primary btn-lg float-right mr-5" routerLink = "/create-order">Añadir</button>
+                          <table class="table">
+                              <thead class=" text-primary">
+                                  <th>
+                                      ID
+                                  </th>
+                                  <th>
+                                      Usuario
+                                  </th>
+                                  <th>
+                                      Productos
+                                  </th>
+                                  <th>
+                                      Precio
+                                  </th>
+                                  <th>
+                                      Estado
+                                  </th>
+                                  <th></th>
+                              </thead>
+                              <tbody>
+                                  <tr *ngFor="let order of ordenes">
+                                      <td>
+                                          {{ order.id }}
+                                      </td>
+                                      <td>
+                                          {{ order.usuario }}
+                                      </td>
+                                      <td>
+                                          0
+                                      </td>
+                                      <td>
+                                          {{ order.precio }}
+                                      </td>
+                                      <td>
+                                          {{ order.estado }}
+                                      </td>
+                                      <td>
+                                          <i (click) = "entregarOrden(order.id)"class="fas fa-check fa-lg text-success mr-3"></i>
+                                          <i (click) = "cancelarOrden(order.id)" class="fas fa-times fa-lg text-danger"></i>
+                                    </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-12">
+              <div class="card card-plain">
+                  <div class="card-header card-header-success">
+                      <h4 class="card-title mt-0"> Ventas Realizas </h4>
+                      <p class="card-category"> Ordenes entregadas</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table table-hover">
+                              <thead class="">
+                                  <th>
+                                      ID
+                                  </th>
+                                  <th>
+                                      Usuario
+                                  </th>
+                                  <th>
+                                      Telefono
+                                  </th>
+                                  <th>
+                                      Costo Final
+                                  </th>
+                                  <th>
+                                      Ver detalles...
+                                  </th>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>
+                                          1
+                                      </td>
+                                      <td>
+                                          Dakota Rice
+                                      </td>
+                                      <td>
+                                          Niger
+                                      </td>
+                                      <td>
+                                          $36,738
+                                      </td>
+                                      <td>
+                                          <a class="nav-link" [routerLink] = "['/order-info']">3 productos...</a>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          2
+                                      </td>
+                                      <td>
+                                          Minerva Hooper
+                                      </td>
+                                      <td>
+                                          Curaçao
+                                      </td>
+                                      <td>
+                                          $23,789
+                                      </td>
+                                      <td>
+                                          b
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          3
+                                      </td>
+                                      <td>
+                                          Sage Rodriguez
+                                      </td>
+                                      <td>
+                                          Netherlands
+                                      </td>
+                                      <td>
+                                          $56,142
+                                      </td>
+                                      <td>
+                                          a
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          4
+                                      </td>
+                                      <td>
+                                          Philip Chaney
+                                      </td>
+                                      <td>
+                                          Korea, South
+                                      </td>
+                                      <td>
+                                          $38,735
+                                      </td>
+                                      <td>
+                                          a
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          5
+                                      </td>
+                                      <td>
+                                          Doris Greene
+                                      </td>
+                                      <td>
+                                          Malawi
+                                      </td>
+                                      <td>
+                                          $63,542
+                                      </td>
+                                      <td>
+                                          a
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                          6
+                                      </td>
+                                      <td>
+                                          Mason Porter
+                                      </td>
+                                      <td>
+                                          Chile
+                                      </td>
+                                      <td>
+                                          $78,615
+                                      </td>
+                                      <td>
+                                          a
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

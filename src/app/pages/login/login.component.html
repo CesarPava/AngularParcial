@@ -1,0 +1,26 @@
+<form (ngSubmit)="login(f)" #f="ngForm">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label"  >Email address</label>
+    <input type="email" [(ngModel)]="usuario.email" class="form-control"  name="email" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">Ingrese su correo</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" [(ngModel)]="usuario.password" class="form-control"  name="password">
+  </div>
+
+  <div class="mb-3 form-check">
+    <input  [(ngModel)]="recuerdame" type="checkbox" class="form-check-input" name="recuerdame">
+    <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
+    <div>
+      <a routerLink="/login" class="txt1">
+        ¿Ya tienes cuenta? / Ingresar
+      </a>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Crear cuenta</button>
+
+  
+</form>
+

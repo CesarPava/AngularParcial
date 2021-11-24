@@ -61,8 +61,7 @@
           <div class="col-md-12">
               <div class="card card-plain">
                   <div class="card-header card-header-success">
-                      <h4 class="card-title mt-0"> Ventas Realizas </h4>
-                      <p class="card-category"> Ordenes entregadas</p>
+                      <h4 class="card-title mt-0"> Domiciliarios Ocupados </h4>
                   </div>
                   <div class="card-body">
                       <div class="table-responsive">
@@ -103,7 +102,7 @@
                                     </td>
 
                                     <td>
-                                      <i  style="margin-right: 20px;" (click) = "cambiarEstadoDomiciliario(domiciliario.id)" class="fas fa-check fa-lg text-success mr-3"></i>
+                                      <i  style="margin-right: 20px;" (click) = "activarEstadoDomiciliario(domiciliario.id)" class="fas fa-check fa-lg text-success mr-3"></i>
                                       <i (click)= "eliminarDomiciliario(domiciliario.id)" class="fas fa-times fa-lg text-danger"></i>
                                   </td>
                                 </tr>

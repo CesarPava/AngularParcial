@@ -29,4 +29,7 @@ export class DomiciliariosService {
     return this.firestore.collection('domiciliarios').doc(id).update({ estado: "Ocupado" })
   }
 
+  activarEstadoDomiciliario(id: string) {
+    return this.firestore.collection('domiciliarios').doc(id).update({ estado: "activo" })
+  }
 }

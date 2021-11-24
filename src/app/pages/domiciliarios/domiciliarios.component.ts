@@ -53,7 +53,12 @@ export class DomiciliariosComponent implements OnInit {
 
   cambiarEstadoDomiciliario(id: string){
     this._domiciliariosService.cambiarEstadoDomiciliario(id).then(() => {
-      console.log('Entregado');
+    }).catch(error => {
+      console.log(error);
+    })
+  }
+  activarEstadoDomiciliario(id: string){
+    this._domiciliariosService.activarEstadoDomiciliario(id).then(() => {
     }).catch(error => {
       console.log(error);
     })

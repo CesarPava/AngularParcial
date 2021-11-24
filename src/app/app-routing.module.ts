@@ -14,6 +14,8 @@ import { CrearModificarOfertaComponent } from './pages/crear-modificar-oferta/cr
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DomiciliariosComponent } from './pages/domiciliarios/domiciliarios.component';
 import { CreateDomiciliarioComponent } from './pages/create-domiciliario/create-domiciliario.component';
+import { TiendasComponent } from './pages/tiendas/tiendas.component';
+import { CrearModificarTiendaComponent } from './pages/crear-modificar-tienda/crear-modificar-tienda.component';
 
 const routes: Routes = [
   
@@ -32,6 +34,9 @@ const routes: Routes = [
   {path: 'dashboard',component:DashboardComponent},
   {path: 'domiciliarios',component:DomiciliariosComponent},
   {path:'create-domiciliarios',component:CreateDomiciliarioComponent},
+  {path: 'tiendas', component:TiendasComponent},
+  {path: 'create-tienda', component:CrearModificarTiendaComponent},
+  {path: 'edit-tienda/:id', component:CrearModificarTiendaComponent},
   {path: '**', redirectTo: 'home'},
   
 ];

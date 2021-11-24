@@ -23,6 +23,8 @@ import { CrearModificarOfertaComponent } from './pages/crear-modificar-oferta/cr
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DomiciliariosComponent } from './pages/domiciliarios/domiciliarios.component';
 import { CreateDomiciliarioComponent } from './pages/create-domiciliario/create-domiciliario.component';
+import { TiendasComponent } from './pages/tiendas/tiendas.component';
+import { CrearModificarTiendaComponent } from './pages/crear-modificar-tienda/crear-modificar-tienda.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { CreateDomiciliarioComponent } from './pages/create-domiciliario/create-
     CrearModificarOfertaComponent,
     DashboardComponent,
     DomiciliariosComponent,
-    CreateDomiciliarioComponent
+    CreateDomiciliarioComponent,
+    TiendasComponent,
+    CrearModificarTiendaComponent
   ],
   imports: [
     BrowserModule,

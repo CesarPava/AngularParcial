@@ -74,9 +74,6 @@
                                       Usuario
                                   </th>
                                   <th>
-                                      Telefono
-                                  </th>
-                                  <th>
                                       Costo Final
                                   </th>
                                   <th>
@@ -84,106 +81,18 @@
                                   </th>
                               </thead>
                               <tbody>
-                                  <tr>
+                                  <tr *ngFor="let order of ordenes2">
                                       <td>
-                                          1
+                                        {{ order.id }}
                                       </td>
                                       <td>
-                                          Dakota Rice
+                                        {{ order.usuario }}
                                       </td>
                                       <td>
-                                          Niger
+                                        {{ order.precioFinal }}
                                       </td>
                                       <td>
-                                          $36,738
-                                      </td>
-                                      <td>
-                                          <a class="nav-link" [routerLink] = "['/order-info']">3 productos...</a>
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          2
-                                      </td>
-                                      <td>
-                                          Minerva Hooper
-                                      </td>
-                                      <td>
-                                          Curaçao
-                                      </td>
-                                      <td>
-                                          $23,789
-                                      </td>
-                                      <td>
-                                          b
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          3
-                                      </td>
-                                      <td>
-                                          Sage Rodriguez
-                                      </td>
-                                      <td>
-                                          Netherlands
-                                      </td>
-                                      <td>
-                                          $56,142
-                                      </td>
-                                      <td>
-                                          a
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          4
-                                      </td>
-                                      <td>
-                                          Philip Chaney
-                                      </td>
-                                      <td>
-                                          Korea, South
-                                      </td>
-                                      <td>
-                                          $38,735
-                                      </td>
-                                      <td>
-                                          a
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          5
-                                      </td>
-                                      <td>
-                                          Doris Greene
-                                      </td>
-                                      <td>
-                                          Malawi
-                                      </td>
-                                      <td>
-                                          $63,542
-                                      </td>
-                                      <td>
-                                          a
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          6
-                                      </td>
-                                      <td>
-                                          Mason Porter
-                                      </td>
-                                      <td>
-                                          Chile
-                                      </td>
-                                      <td>
-                                          $78,615
-                                      </td>
-                                      <td>
-                                          a
+                                          <a class="nav-link" [routerLink] = "['/order-info']"> {{ order.productos.length }} productos...</a>
                                       </td>
                                   </tr>
                               </tbody>

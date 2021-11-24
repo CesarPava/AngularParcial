@@ -14,8 +14,13 @@ export class OrdenService {
   }
 
   getOrders(): Observable<any> {
-    return this.firestore.collection('ordenes').snapshotChanges();
+    return this.firestore.collection('ordenes', ref => ref.where('estado', '==', 'En curso')).snapshotChanges();
   }
+
+  getOrdersEndend(): Observable<any> {
+    return this.firestore.collection('ordenes', ref => ref.where('estado', '==', 'Entregado')).snapshotChanges();
+  }
+
 
   cancelarOrden(id: string): Promise<any> {
     return this.firestore.collection('ordenes').doc(id).delete();

@@ -8,11 +8,13 @@ import { DomiciliariosService } from 'src/app/services/domiciliarios.service';
 })
 export class DomiciliariosComponent implements OnInit {
   domiciliarios: any[]=[];
+  domiciliarios2: any[]=[];
 
   constructor(private _domiciliariosService:DomiciliariosService) { }
 
   ngOnInit() {
     this.getDomiciliaros();
+    this.getDomiciliarosOcupados();
   }
 
   getDomiciliaros() {
@@ -25,6 +27,19 @@ export class DomiciliariosComponent implements OnInit {
         })
       });
       console.log(this.domiciliarios)
+    });
+  }
+
+  getDomiciliarosOcupados() {
+    this._domiciliariosService.getDomiciliariosOcupados().subscribe(data => {
+      this.domiciliarios2 = []
+      data.forEach((element:any) => {
+        this.domiciliarios2.push({
+          id:element.payload.doc.id,
+          ...element.payload.doc.data()
+        })
+      });
+      console.log(this.domiciliarios2)
     });
   }
 

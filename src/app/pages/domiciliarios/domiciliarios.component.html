@@ -68,126 +68,46 @@
                       <div class="table-responsive">
                           <table class="table table-hover">
                               <thead class="">
-                                  <th>
-                                      ID
-                                  </th>
-                                  <th>
-                                      Usuario
-                                  </th>
-                                  <th>
-                                      Telefono
-                                  </th>
-                                  <th>
-                                      Costo Final
-                                  </th>
-                                  <th>
-                                      Ver detalles...
-                                  </th>
+                                <th>
+                                    ID
+                                </th>
+                                <th>
+                                    Nombre
+                                </th>
+                                <th>
+                                    Cedula
+                                </th>
+                                <th>
+                                    Telefóno
+                                </th>
+                                <th>
+                                    Estado
+                                </th>
                               </thead>
                               <tbody>
-                                  <tr>
-                                      <td>
-                                          1
-                                      </td>
-                                      <td>
-                                          Dakota Rice
-                                      </td>
-                                      <td>
-                                          Niger
-                                      </td>
-                                      <td>
-                                          $36,738
-                                      </td>
-                                      <td>
-                                          <a class="nav-link" [routerLink] = "['/order-info']">3 productos...</a>
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          2
-                                      </td>
-                                      <td>
-                                          Minerva Hooper
-                                      </td>
-                                      <td>
-                                          Curaçao
-                                      </td>
-                                      <td>
-                                          $23,789
-                                      </td>
-                                      <td>
-                                          b
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          3
-                                      </td>
-                                      <td>
-                                          Sage Rodriguez
-                                      </td>
-                                      <td>
-                                          Netherlands
-                                      </td>
-                                      <td>
-                                          $56,142
-                                      </td>
-                                      <td>
-                                          a
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          4
-                                      </td>
-                                      <td>
-                                          Philip Chaney
-                                      </td>
-                                      <td>
-                                          Korea, South
-                                      </td>
-                                      <td>
-                                          $38,735
-                                      </td>
-                                      <td>
-                                          a
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          5
-                                      </td>
-                                      <td>
-                                          Doris Greene
-                                      </td>
-                                      <td>
-                                          Malawi
-                                      </td>
-                                      <td>
-                                          $63,542
-                                      </td>
-                                      <td>
-                                          a
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          6
-                                      </td>
-                                      <td>
-                                          Mason Porter
-                                      </td>
-                                      <td>
-                                          Chile
-                                      </td>
-                                      <td>
-                                          $78,615
-                                      </td>
-                                      <td>
-                                          a
-                                      </td>
-                                  </tr>
-                              </tbody>
+                                <tr *ngFor="let domiciliario of domiciliarios2">
+                                    <td>
+                                        {{ domiciliario.id }}
+                                    </td>
+                                    <td>
+                                        {{ domiciliario.nombre}}
+                                    </td>
+                                    <td>
+                                      {{ domiciliario.cedula}}
+                                    </td>
+                                    <td>
+                                      {{ domiciliario.telefono}}
+                                    </td>
+                                    <td>
+                                      {{ domiciliario.estado}}
+                                    </td>
+
+                                    <td>
+                                      <i  style="margin-right: 20px;" (click) = "cambiarEstadoDomiciliario(domiciliario.id)" class="fas fa-check fa-lg text-success mr-3"></i>
+                                      <i (click)= "eliminarDomiciliario(domiciliario.id)" class="fas fa-times fa-lg text-danger"></i>
+                                  </td>
+                                </tr>
+                            </tbody>
                           </table>
                       </div>
                   </div>

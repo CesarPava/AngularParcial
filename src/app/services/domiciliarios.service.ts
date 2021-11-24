@@ -14,7 +14,11 @@ export class DomiciliariosService {
   }
 
   getDomiciliarios(): Observable<any> {
-    return this.firestore.collection('domiciliarios').snapshotChanges();
+    return this.firestore.collection('domiciliarios', ref => ref.where('estado', '==', 'activo')).snapshotChanges();
+  }
+
+  getDomiciliariosOcupados(): Observable<any> {
+    return this.firestore.collection('domiciliarios', ref => ref.where('estado', '==', 'Ocupado')).snapshotChanges();
   }
 
   eliminarDomiciliario(id: string): Promise<any> {

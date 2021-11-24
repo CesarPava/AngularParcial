@@ -9,12 +9,14 @@ import { OrdenService } from 'src/app/services/orden.service';
 })
 export class TableListComponent implements OnInit {
   ordenes: any[] = [];
+  ordenes2: any[] = []
 
   constructor(private _ordenService: OrdenService) { 
   }
 
   ngOnInit() {
     this.getOrders()
+    this.getOrdersEndend()
   }
 
   getOrders() {
@@ -27,6 +29,19 @@ export class TableListComponent implements OnInit {
         })
       });
       console.log(this.ordenes)
+    });
+  }
+
+  getOrdersEndend() {
+    this._ordenService.getOrdersEndend().subscribe(data => {
+      this.ordenes2 = []
+      data.forEach((element:any) => {
+        this.ordenes2.push({
+          id:element.payload.doc.id,
+          ...element.payload.doc.data()
+        })
+      });
+      console.log(this.ordenes2)
     });
   }
 

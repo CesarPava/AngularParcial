@@ -12,6 +12,8 @@ import { CrearModificarProductoComponent } from './pages/crear-modificar-product
 import { CrearModificarMetodoPagoComponent } from './pages/crear-modificar-metodo-pago/crear-modificar-metodo-pago.component';
 import { CrearModificarOfertaComponent } from './pages/crear-modificar-oferta/crear-modificar-oferta.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { DomiciliariosComponent } from './pages/domiciliarios/domiciliarios.component';
+import { CreateDomiciliarioComponent } from './pages/create-domiciliario/create-domiciliario.component';
 
 const routes: Routes = [
   
@@ -28,6 +30,8 @@ const routes: Routes = [
   {path: 'create-oferta', component: CrearModificarOfertaComponent},
   {path: 'edit-oferta/:id', component: CrearModificarOfertaComponent},
   {path: 'dashboard',component:DashboardComponent},
+  {path: 'domiciliarios',component:DomiciliariosComponent},
+  {path:'create-domiciliarios',component:CreateDomiciliarioComponent},
   {path: '**', redirectTo: 'home'},
   
 ];

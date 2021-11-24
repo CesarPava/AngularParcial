@@ -4,25 +4,25 @@
           <div class="col-md-12">
               <div class="card">
                   <div class="card-header card-header-warning">
-                      <h4 class="card-title ">Ordenes en curso</h4>
-                      <p class="card-category"> Ordenes a realizar</p>
+                      <h4 class="card-title ">Domiciliarios Disponibles</h4>
+                     
                   </div>
                   <div class="card-body">
                       <div class="table-responsive">
-                          <button class="btn btn-primary btn-lg float-right mr-5" routerLink = "/create-order">Añadir</button>
+                          <button class="btn btn-primary btn-lg float-right mr-5" routerLink = "/create-domiciliarios">Añadir</button>
                           <table class="table">
                               <thead class=" text-primary">
                                   <th>
                                       ID
                                   </th>
                                   <th>
-                                      Usuario
+                                      Nombre
                                   </th>
                                   <th>
-                                      Productos
+                                      Cedula
                                   </th>
                                   <th>
-                                      Precio
+                                      Telefóno
                                   </th>
                                   <th>
                                       Estado
@@ -30,25 +30,26 @@
                                   <th></th>
                               </thead>
                               <tbody>
-                                  <tr *ngFor="let order of ordenes">
+                                  <tr *ngFor="let domiciliario of domiciliarios">
                                       <td>
-                                          {{ order.id }}
+                                          {{ domiciliario.id }}
                                       </td>
                                       <td>
-                                          {{ order.usuario }}
+                                          {{ domiciliario.nombre}}
                                       </td>
                                       <td>
-                                          0
+                                        {{ domiciliario.cedula}}
                                       </td>
                                       <td>
-                                          {{ order.precio }}
+                                        {{ domiciliario.telefono}}
                                       </td>
                                       <td>
-                                          {{ order.estado }}
+                                        {{ domiciliario.estado}}
                                       </td>
+
                                       <td>
-                                          <i style="margin-right: 20px;"(click) = "entregarOrden(order.id)"class="fas fa-check fa-lg text-success mr-3"></i>
-                                          <i (click) = "cancelarOrden(order.id)" class="fas fa-times fa-lg text-danger"></i>
+                                        <i  style="margin-right: 20px;" (click) = "cambiarEstadoDomiciliario(domiciliario.id)" class="fas fa-check fa-lg text-success mr-3"></i>
+                                        <i (click)= "eliminarDomiciliario(domiciliario.id)" class="fas fa-times fa-lg text-danger"></i>
                                     </td>
                                   </tr>
                               </tbody>

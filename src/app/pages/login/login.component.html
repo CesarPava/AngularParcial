@@ -1,6 +1,6 @@
 <form (ngSubmit)="login(f)" #f="ngForm">
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label"  >Correo Electronico</label>
+    <label for="exampleInputEmail1" class="form-label"  >Correo Electrónico</label>
     <input type="email" [(ngModel)]="usuario.email" class="form-control"  name="email" aria-describedby="emailHelp">
     <div id="emailHelp" class="form-text">Ingrese su correo</div>
   </div>
@@ -12,7 +12,7 @@
 
   <div class="mb-3 form-check">
     <input  [(ngModel)]="recuerdame" type="checkbox" class="form-check-input" name="recuerdame">
-    <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
+    <label class="form-check-label" for="exampleCheck1">Recuérdame</label>
     <div>
       <a routerLink="/registro" class="txt1">
         ¿No tienes cuenta? / Registrate

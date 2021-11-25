@@ -1,7 +1,7 @@
 <div class="card">
   <div class="card-header card-header-warning">
     <span class="card-title" style="font-size: 30px">Tiendas Online</span>
-    <button class="btn btn-danger pull-right" routerLink="/create-tienda">
+    <button style="margin-left: 10px;"class="btn btn-danger pull-right" routerLink="/create-tienda">
       Agregar
     </button>
   </div>
@@ -10,7 +10,7 @@
       <thead class="text-warning">
         <th>Nombre</th>
         <th>Email</th>
-        <th>Telefono</th>
+        <th>Teléfono</th>
         <th>Estado</th>
         <th></th>
       </thead>
@@ -23,15 +23,15 @@
           <td>
             <i
               class="fas fa-edit fa-lg text-info"
-              style="padding-right: 5px; cursor: pointer"
+              style="padding-right: 5px; cursor: pointer;;margin-right: 10px;"
               [routerLink]="['/edit-tienda', tienda.id]"
             ></i>
             <i
               (click)="eliminarTienda(tienda.id)"
               class="fas fa-trash-alt fa-lg text-danger"
-              style="cursor: pointer"
+              style="cursor: pointer;margin-right: 20px;"
             ></i>
-            <i class="fas fa-power-off text-danger" (click) = "desactivarTienda(tienda.id)" style="padding-right: 5px; cursor: pointer"></i>
+            <i class="fas fa-power-off text-danger" (click) = "desactivarTienda(tienda.id)" style="padding-right: 5px; cursor: pointer;margin-right:5px"></i>
           </td>
         </tr>
       </tbody>
@@ -41,16 +41,14 @@
 <div class="card">
   <div class="card-header card-header-warning">
     <span class="card-title" style="font-size: 30px">Tiendas Offline</span>
-    <button class="btn btn-danger pull-right" routerLink="/create-tienda">
-      Agregar
-    </button>
+    
   </div>
   <div class="card-body table-responsive">
     <table class="table table-hover">
       <thead class="text-warning">
         <th>Nombre</th>
         <th>Email</th>
-        <th>Telefono</th>
+        <th>Teléfono</th>
         <th>Estado</th>
         <th></th>
       </thead>
@@ -63,15 +61,15 @@
           <td>
             <i
               class="fas fa-edit fa-lg text-info"
-              style="padding-right: 5px; cursor: pointer"
+              style="padding-right: 5px; cursor: pointer;margin-right: 10px;"
               [routerLink]="['/edit-tienda', tienda.id]"
             ></i>
             <i
               (click)="eliminarTienda(tienda.id)"
               class="fas fa-trash-alt fa-lg text-danger"
-              style="cursor: pointer"
+              style="cursor: pointer;margin-right:5px;"
             ></i>
-            <i class="fas fa-power-off text-success" (click) = "activarTienda(tienda.id)" style="padding-right: 5px; cursor: pointer"></i>
+            <i class="fas fa-power-off text-success" (click) = "activarTienda(tienda.id)" style="padding-right: 5px; cursor: pointer;margin-left: 20px"></i>
           </td>
         </tr>
       </tbody>

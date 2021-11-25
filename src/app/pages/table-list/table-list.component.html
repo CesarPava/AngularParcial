@@ -92,7 +92,7 @@
                                         {{ order.precioFinal }}
                                       </td>
                                       <td>
-                                          <a class="nav-link" [routerLink] = "['/order-info']"> {{ order.productos.length }} productos...</a>
+                                          <a class="nav-link" [routerLink] = "['/order-info', order.id]"> {{ order.productos.length }} productos...</a>
                                       </td>
                                   </tr>
                               </tbody>

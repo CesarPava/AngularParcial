@@ -22,7 +22,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent,canActivate:[AuthGuard]},
   {path: 'registro', component: RegistroComponent},
   {path: 'login', component: LoginComponent},
-  { path: 'order-info', component:OrdenInfoComponent},
+  { path: 'order-info/:id', component:OrdenInfoComponent},
   { path: 'create-order', component: CreateOrderComponent},
   {path:'table-list',component:TableListComponent},
   {path: 'create-producto', component: CrearModificarProductoComponent},
